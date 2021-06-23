@@ -1,0 +1,9 @@
+<launch>
+
+    <!--- Run Rviz-->
+    <include file="$(find lvi_sam)/launch/include/module_rviz.launch" />
+
+    <!--- SAM -->
+    <include file="$(find a1_launch)/launch/lvi_sam.launch" />
+
+</launch>
