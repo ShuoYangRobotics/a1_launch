@@ -6,9 +6,9 @@
     <param name="vins_config_file" type="string" value="$(find a1_launch)/config/vins_fusion_real_sense_xsens.yaml" />
     
     <node name="vinsfusion" pkg="vins" type="vins_node"
-            args="/home/biorobotics/ros_workspaces/estimation_ws/src/a1_launch/config/vins_fusion_real_sense_xsens.yaml" />
+            args="$(find a1_launch)/config/vins_fusion_real_sense_xsens.yaml" />
     <node name="vinsloopfusion" pkg="loop_fusion" type="loop_fusion_node"
-            args="/home/biorobotics/ros_workspaces/estimation_ws/src/a1_launch/config/vins_fusion_real_sense_xsens.yaml" />
+            args="$(find a1_launch)/config/vins_fusion_real_sense_xsens.yaml" />
 
     <!-- when the robot chassis is on the ground, imu is 227.1mm above the ground, publish a fix transformation -->
     <node pkg="tf" type="static_transform_publisher" name="ground_to_world"
@@ -16,4 +16,8 @@
 
     <node pkg="tf" type="static_transform_publisher" name="body_to_a1_body"
           args="0.0 0.0 -0.1521 0.0 0.0 0.0 /body /a1_body 1000" />
+
+    <node pkg="tf" type="static_transform_publisher" name="camera_to_downward_camera"
+          args="0.0 0.0852 0.0  0.0 0.0 -0.785398 /camera /camera_downward_depth_optical_frame 1000" />   
+
 </launch>

@@ -15,9 +15,9 @@
   <arg name="cd_color_width"         default="640"/>
   <arg name="cd_color_height"        default="480"/>
 
-  <arg name="cd_depth_fps"           default="15"/>
+  <arg name="cd_depth_fps"           default="30"/>
   <arg name="cd_infra_fps"           default="15"/>
-  <arg name="cd_color_fps"           default="15"/>
+  <arg name="cd_color_fps"           default="30"/>
 
   <arg name="cd_enable_depth"        default="true"/>
   <arg name="cd_enable_infra1"       default="false"/>
@@ -27,6 +27,8 @@
   <arg name="cd_enable_pointcloud"         default="true"/>
   <arg name="cd_pointcloud_texture_stream" default="RS2_STREAM_COLOR"/>
   <arg name="cd_pointcloud_texture_index"  default="0"/>
+
+  <arg name="cd_publish_tf"          default="false"/>
 
   <group ns="$(arg camera_downward)">
     <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml">
@@ -52,6 +54,7 @@
       <arg name="enable_pointcloud"         value="$(arg cd_enable_pointcloud)"/>
       <arg name="pointcloud_texture_stream" value="$(arg cd_pointcloud_texture_stream)"/>
       <arg name="pointcloud_texture_index"  value="$(arg cd_pointcloud_texture_index)"/>
+      <arg name="publish_tf"                value="$(arg cd_publish_tf)"/>
 
     </include>
   </group>
@@ -60,4 +63,6 @@
   <node name="dynparam2" pkg="dynamic_reconfigure" type="dynparam"
         args="set /camera_downward/stereo_module 'emitter_enabled' 0" 
         launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+
+     
 </launch>
