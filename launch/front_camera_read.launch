@@ -35,6 +35,9 @@
     <arg name="cf_pointcloud_texture_stream" default="RS2_STREAM_COLOR"/>
     <arg name="cf_pointcloud_texture_index"  default="0"/>
 
+    <arg name="cf_publish_tf"          default="false"/>
+    
+
     <group ns="$(arg camera_forward)">
         <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml">
             <arg name="serial_no"                 value="$(arg serial_no_camera_forward)"/>
@@ -65,6 +68,8 @@
             <arg name="enable_gyro"              value="$(arg cf_enable_gyro)"/>
             <arg name="enable_accel"             value="$(arg cf_enable_accel)"/>
             <arg name="unite_imu_method"         value="$(arg cf_unite_imu_method)"/>
+            <arg name="publish_tf"               value="$(arg cf_publish_tf)"/>
+            
 
         </include>
     </group>
