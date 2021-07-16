@@ -1,0 +1,5 @@
+sensor_processor/type: perfect
+sensor_processor/apply_leg_box: false
+sensor_processor/apply_voxelgrid_filter: true
+sensor_processor/voxelgrid_filter_size: 0.01
+sensor_processor/ignore_points_above: 1.5
