@@ -12,4 +12,5 @@ min_update_rate: 20
 fused_map_publishing_rate: 20
 relocate_rate: 20
 initialize_elevation_map: true
+init_submap_height_offset: 0.0001
 target_frame_init_submap: "/a1_world"
