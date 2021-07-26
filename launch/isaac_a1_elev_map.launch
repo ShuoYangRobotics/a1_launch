@@ -1,0 +1,14 @@
+<launch>
+  <!-- <node name="relay1" pkg="topic_tools" type="relay" args="/camera_forward/depth/color/points /cloud_in" /> -->
+  <node name="relay2" pkg="topic_tools" type="relay" args="/isaac_a1/camera_downward/depth/points /cloud_in" />
+
+
+  <!-- Elevation mapping node -->
+  <node pkg="elevation_mapping" type="elevation_mapping" name="elevation_mapping" output="screen">
+    <rosparam command="load" file="$(find a1_launch)/config/elev_robots/isaac_a1_robot.yaml" />
+    <rosparam command="load" file="$(find a1_launch)/config/elev_maps/isaac_a1_map.yaml" />
+    <rosparam command="load" file="$(find a1_launch)/config/elev_maps/isaac_cam.yaml" />
+  </node>
+
+
+</launch>
