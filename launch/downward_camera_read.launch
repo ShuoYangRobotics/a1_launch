@@ -7,17 +7,17 @@
   <arg name="tf_prefix_camera2"          default="$(arg camera_downward)"/>
 
   <!-- camera_downward settings  -->
-  <arg name="cd_initial_reset"              default="false"/>
+  <arg name="cd_initial_reset"              default="true"/>
 
-  <arg name="cd_depth_width"         default="640"/>
-  <arg name="cd_depth_height"        default="480"/>
+  <arg name="cd_depth_width"         default="424"/>
+  <arg name="cd_depth_height"        default="240"/>
 
-  <arg name="cd_color_width"         default="640"/>
-  <arg name="cd_color_height"        default="480"/>
+  <arg name="cd_color_width"         default="424"/>
+  <arg name="cd_color_height"        default="240"/>
 
-  <arg name="cd_depth_fps"           default="30"/>
+  <arg name="cd_depth_fps"           default="15"/>
   <arg name="cd_infra_fps"           default="15"/>
-  <arg name="cd_color_fps"           default="30"/>
+  <arg name="cd_color_fps"           default="15"/>
 
   <arg name="cd_enable_depth"        default="true"/>
   <arg name="cd_enable_infra1"       default="false"/>
