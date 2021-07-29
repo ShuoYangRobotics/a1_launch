@@ -2,7 +2,7 @@ point_cloud_topic: "/cloud_in"
 map_frame_id: "/a1_world"
 robot_base_frame_id: "/a1_body"
 robot_pose_with_covariance_topic: "/a1/pose_with_cov"
-robot_pose_cache_size: 300
+robot_pose_cache_size: 100
 track_point_frame_id: "/a1_body"
 track_point_x: 0.0
 track_point_y: 0.0
