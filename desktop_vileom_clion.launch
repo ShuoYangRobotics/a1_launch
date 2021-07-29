@@ -1,0 +1,11 @@
+<launch>
+    <param name="use_sim_time" value="true"/>
+    <node pkg="rosbag" type="play" name="player" output="screen" 
+        args="--clock /home/shuoy/rosbag/first_drive.bag"/>
+    <!-- when the robot chassis is on the ground, imu is 227.1mm above the ground, publish a fix transformation -->
+    <node pkg="tf" type="static_transform_publisher" name="ground_to_world"
+          args="0.0 0.0 0.2271 0.0 0.0 0.0 /a1_world /world 1000" />
+
+    <node pkg="tf" type="static_transform_publisher" name="body_to_a1_body"
+          args="0.0 0.0 -0.1521 0.0 0.0 0.0 /body /a1_body 1000" />
+</launch>
