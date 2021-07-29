@@ -1,7 +1,7 @@
 # Written by Lefteris kotsonis.
 # Modeling Realsense D435 Sensor Noise for Improved 3D Reconstruction and Tracking.
 sensor_processor/type: structured_light
-sensor_processor/cutoff_min_depth: 0.2
+sensor_processor/cutoff_min_depth: 0.1
 sensor_processor/cutoff_max_depth: 3.25
 sensor_processor/normal_factor_a: 0.000611
 sensor_processor/normal_factor_b:  0.003587
@@ -9,6 +9,6 @@ sensor_processor/normal_factor_c: 0.3515
 sensor_processor/normal_factor_d: 0
 sensor_processor/normal_factor_e: 1
 sensor_processor/lateral_factor: 0.01576
-sensor_processor/apply_leg_box: true
+sensor_processor/apply_leg_box: false
 sensor_processor/ignore_points_above: 1.5
-sensor_processor/voxelgrid_filter_size: 0.03
+sensor_processor/voxelgrid_filter_size: 0.04
