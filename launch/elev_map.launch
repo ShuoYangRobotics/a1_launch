@@ -7,7 +7,7 @@
   <node pkg="elevation_mapping" type="elevation_mapping" name="elevation_mapping" output="screen">
     <rosparam command="load" file="$(find a1_launch)/config/elev_robots/a1_robot.yaml" />
     <rosparam command="load" file="$(find a1_launch)/config/elev_maps/a1_map.yaml" />
-    <rosparam command="load" file="$(find elevation_mapping)/config/sensor_processors/realsense_d435.yaml" />
+    <rosparam command="load" file="$(find a1_launch)/config/elev_maps/realsense_d435.yaml" />
   </node>
 
 

@@ -1,0 +1,8 @@
+
+<launch>
+    <!-- <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch" /> -->
+
+    <include file="$(find xsens_mti_driver)/launch/xsens_mti_node.launch" />
+
+    <include file="$(find a1_launch)/launch/front_camera_read.launch" />
+</launch>
