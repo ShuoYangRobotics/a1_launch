@@ -19,14 +19,14 @@ image_height: 480
 use_leg_odom: 1
 num_of_leg: 4
 leg_topic: "/a1/joint_foot"
-optimize_leg_bias: 1
+optimize_leg_bias: 0
 joint_angle_n: 0.001
 joint_velocity_n: 0.002
-foot_velocity_n: 0.01
-leg_bias_n: 0.00001
+foot_velocity_n: 0.05
+leg_bias_n: 0.00002
 
 # leg kinematics parameter
-lower_leg_length: 0.21
+lower_leg_length: 0.22
 
 # each foot has a contact to uncertainty model
 foot1_contact_range_min: -0.0
