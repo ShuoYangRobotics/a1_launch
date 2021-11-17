@@ -19,7 +19,7 @@ image_height: 480
 use_leg_odom: 1
 num_of_leg: 4
 leg_topic: "/isaac_a1/joint_foot"
-optimize_leg_bias: 1
+optimize_leg_bias: 0
 joint_angle_n: 0.1
 joint_velocity_n: 0.1
 foot_velocity_n: 0.05
