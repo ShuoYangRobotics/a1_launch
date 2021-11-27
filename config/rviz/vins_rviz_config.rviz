@@ -5,6 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /VIOGroup1
         - /VIOGroup1/VIOPath1
         - /VIOGroup1/CameraMarker1
         - /VIOGroup1/PointCloud1
@@ -32,7 +33,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: PointCloud
   - Class: rviz/Displays
     Help Height: 78
     Name: Displays
@@ -209,7 +210,7 @@ Visualization Manager:
           Radius: 0.029999999329447746
           Shaft Diameter: 0.10000000149011612
           Shaft Length: 0.10000000149011612
-          Topic: /vileom/path
+          Topic: /vinsfusion/path
           Unreliable: false
           Value: true
         - Class: rviz/MarkerArray
@@ -245,7 +246,7 @@ Visualization Manager:
           Size (Pixels): 2
           Size (m): 0.009999999776482582
           Style: Points
-          Topic: /vileom/point_cloud
+          Topic: /vinsfusion/point_cloud
           Unreliable: false
           Use Fixed Frame: true
           Use rainbow: true
@@ -385,10 +386,16 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        a1_body:
+          Value: true
+        a1_world:
+          Value: true
         body:
           Value: true
         camera:
           Value: false
+        camera_downward_depth_optical_frame:
+          Value: true
         world:
           Value: true
       Marker Scale: 1
@@ -397,7 +404,14 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        a1_world:
+          world:
+            body:
+              a1_body:
+                {}
+              camera:
+                camera_downward_depth_optical_frame:
+                  {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -435,7 +449,7 @@ Visualization Manager:
       Marker Topic: /a1_robot_visualizer
       Name: MarkerArray
       Namespaces:
-        {}
+        a1_robot: true
       Queue Size: 100
       Value: true
     - Alpha: 1
@@ -479,16 +493,16 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 1.7456129789352417
+      Distance: 3.1357977390289307
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.6865898966789246
-        Y: -0.7255665063858032
-        Z: 0.381437748670578
+        X: 1.8359311819076538
+        Y: -2.5197482109069824
+        Z: 0.3814379870891571
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
@@ -497,7 +511,7 @@ Visualization Manager:
       Pitch: 0.6047972440719604
       Target Frame: world
       Value: ThirdPersonFollower (rviz)
-      Yaw: 4.660635948181152
+      Yaw: 4.655635833740234
     Saved: ~
 Window Geometry:
   Displays:
@@ -515,8 +529,8 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1587
-  X: 885
-  Y: 318
+  X: 325
+  Y: 62
   loop_match_Image:
     collapsed: false
   track_image:
