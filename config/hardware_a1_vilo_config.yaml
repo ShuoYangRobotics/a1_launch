@@ -19,12 +19,12 @@ image_height: 480
 use_leg_odom: 1
 num_of_leg: 4
 leg_topic: "/hardware_a1/joint_foot"
-optimize_leg_bias: 1
-joint_angle_n: 0.0001
-joint_velocity_n: 0.0002
-foot_velocity_n: 0.005
-swing_foot_velocity_n: 30
-leg_bias_n: 0.001
+optimize_leg_bias: 0
+joint_angle_n: 0.00001
+joint_velocity_n: 0.00002
+foot_velocity_n: 0.01
+swing_foot_velocity_n: 50
+leg_bias_n: 0.0001
 
 # leg kinematics parameter
 lower_leg_length: 0.22
