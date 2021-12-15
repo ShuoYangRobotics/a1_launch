@@ -19,33 +19,17 @@ image_height: 480
 use_leg_odom: 1
 num_of_leg: 4
 leg_topic: "/hardware_a1/joint_foot"
-optimize_leg_bias: 0
+optimize_leg_bias: 1
 joint_angle_n: 0.00001
 joint_velocity_n: 0.00002
 foot_velocity_n: 0.01
-swing_foot_velocity_n: 50
-leg_bias_n: 0.0001
+swing_foot_velocity_n: 70
+leg_bias_xy_n: 0.0001
+leg_bias_z_n:  0.0001
 
 # leg kinematics parameter
-lower_leg_length: 0.22
+lower_leg_length: 0.21
 
-# each foot has a contact to uncertainty model
-foot1_contact_range_min: -0.0
-foot1_contact_range_max: 100.0
-foot1_contact_func_coeffi1: 88.939790775
-foot1_contact_func_coeffi2: -0.080747261
-foot2_contact_range_min: -0.0
-foot2_contact_range_max: 100.0
-foot2_contact_func_coeffi1: 88.939790775
-foot2_contact_func_coeffi2: -0.080747261
-foot3_contact_range_min: -0.0
-foot3_contact_range_max: 100.0
-foot3_contact_func_coeffi1: 88.939790775
-foot3_contact_func_coeffi2: -0.080747261
-foot4_contact_range_min: -0.0
-foot4_contact_range_max: 100.0
-foot4_contact_func_coeffi1: 88.939790775
-foot4_contact_func_coeffi2: -0.080747261
 
 # Extrinsic parameter between IMU and Camera.
 estimate_extrinsic: 1   # 0  Have an accurate extrinsic parameters. We will trust the following imu^R_cam, imu^T_cam, don't change it.
@@ -70,7 +54,7 @@ body_T_cam1: !!opencv-matrix
            0., 0., 0., 1. ]
 
 #Multiple thread support
-multiple_thread: 0
+multiple_thread: 1
 
 #feature traker paprameters
 max_cnt: 150            # max feature number in feature tracking
