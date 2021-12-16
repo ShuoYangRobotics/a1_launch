@@ -33,7 +33,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: PointCloud
   - Class: rviz/Displays
     Help Height: 78
     Name: Displays
@@ -215,10 +215,10 @@ Visualization Manager:
           Value: true
         - Class: rviz/MarkerArray
           Enabled: true
-          Marker Topic: /vileom/camera_pose_visual
+          Marker Topic: /vinsfusion/camera_pose_visual
           Name: CameraMarker
           Namespaces:
-            {}
+            CameraPoseVisualization: true
           Queue Size: 100
           Value: true
         - Alpha: 1
@@ -243,7 +243,7 @@ Visualization Manager:
           Position Transformer: XYZ
           Queue Size: 10
           Selectable: true
-          Size (Pixels): 2
+          Size (Pixels): 4
           Size (m): 0.009999999776482582
           Style: Points
           Topic: /vinsfusion/point_cloud
@@ -260,7 +260,7 @@ Visualization Manager:
           Axis: Z
           Channel Name: intensity
           Class: rviz/PointCloud
-          Color: 0; 255; 0
+          Color: 245; 121; 0
           Color Transformer: FlatColor
           Decay Time: 100
           Enabled: true
@@ -273,10 +273,10 @@ Visualization Manager:
           Position Transformer: XYZ
           Queue Size: 10
           Selectable: true
-          Size (Pixels): 1
+          Size (Pixels): 3
           Size (m): 0.009999999776482582
           Style: Points
-          Topic: /vileom/margin_cloud
+          Topic: /vinsfusion/margin_cloud
           Unreliable: false
           Use Fixed Frame: true
           Use rainbow: true
@@ -386,13 +386,32 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        a1_body:
+          Value: true
+        a1_world:
+          Value: true
+        body:
+          Value: true
+        camera:
+          Value: true
+        camera_downward_depth_optical_frame:
+          Value: true
+        world:
+          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        a1_world:
+          world:
+            body:
+              a1_body:
+                {}
+              camera:
+                camera_downward_depth_optical_frame:
+                  {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -430,7 +449,7 @@ Visualization Manager:
       Marker Topic: /a1_robot_visualizer
       Name: MarkerArray
       Namespaces:
-        {}
+        a1_robot: true
       Queue Size: 100
       Value: true
     - Alpha: 1
@@ -474,25 +493,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 3.1357977390289307
+      Distance: 81.2635498046875
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.8359311819076538
-        Y: -2.5197482109069824
-        Z: 0.3814379870891571
+        X: 15.780869483947754
+        Y: 11.464709281921387
+        Z: 0.3814365565776825
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.6047972440719604
+      Pitch: 0.9747968912124634
       Target Frame: world
       Value: ThirdPersonFollower (rviz)
-      Yaw: 4.655635833740234
+      Yaw: 4.61563777923584
     Saved: ~
 Window Geometry:
   Displays:
@@ -510,8 +529,8 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1587
-  X: 681
-  Y: 45
+  X: 2085
+  Y: 482
   loop_match_Image:
     collapsed: false
   track_image:

@@ -20,11 +20,11 @@ use_leg_odom: 1
 num_of_leg: 4
 leg_topic: "/hardware_a1/joint_foot"
 optimize_leg_bias: 1
-joint_angle_n: 0.00001
-joint_velocity_n: 0.00002
-foot_velocity_n: 0.01
-swing_foot_velocity_n: 70
-leg_bias_xy_n: 0.0001
+joint_angle_n: 0.1
+joint_velocity_n: 0.1
+foot_velocity_n: 0.5
+swing_foot_velocity_n: 1000
+leg_bias_xy_n: 0.00001
 leg_bias_z_n:  0.0001
 
 # leg kinematics parameter
@@ -78,7 +78,7 @@ g_norm: 9.805         # gravity magnitude
 
 #unsynchronization parameters
 estimate_td: 1                      # online estimate time offset between camera and imu
-td: -0.00454                             # initial value of time offset. unit: s. readed image clock + td = real image clock (IMU clock)
+td: 0.00250                             # initial value of time offset. unit: s. readed image clock + td = real image clock (IMU clock)
 
 #loop closure parameters
 load_previous_pose_graph: 0        # load and reuse previous pose graph; load from 'pose_graph_save_path'
