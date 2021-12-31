@@ -20,27 +20,27 @@ use_leg_odom: 1
 num_of_leg: 4
 leg_topic: "/hardware_a1/joint_foot"
 optimize_leg_bias: 1
-joint_angle_n: 0.001
-joint_velocity_n: 0.001
-leg_bias_xy_n: 0.00001
-leg_bias_z_n:  0.003
+joint_angle_n: 0.0001
+joint_velocity_n: 0.0001
+leg_bias_xy_n: 0.001
+leg_bias_z_n:  0.001
 # contact model
-v_n_force_thres_ratio: 0.9
-v_n_min: 0.2
-v_n_max: 1000.0
-v_n_w1: 0.01
-v_n_w2: 0.39
-v_n_w3: 0.6
-v_n_term1_steep: 1
-v_n_term2_bound_force: 700.0
-v_n_term2_var_rescale: 0.5
-v_n_term3_vel_diff_xy: 1
-v_n_term3_vel_diff_z:  1
-v_n_term3_distance_rescale: 1200.0
-v_n_final_ratio: 0.5
+v_n_force_thres_ratio: 0.5
+v_n_min: 0.0001
+v_n_max: 5000.0
+v_n_w1: 0.333
+v_n_w2: 0.333
+v_n_w3: 0.333
+v_n_term1_steep: 0.1
+v_n_term2_bound_force: 100.0
+v_n_term2_var_rescale: 1
+v_n_term3_vel_diff_xy: 0.5
+v_n_term3_vel_diff_z:  0.5
+v_n_term3_distance_rescale: 50.0
+v_n_final_ratio: 0.1
 
 # leg kinematics parameter
-lower_leg_length: 0.21
+lower_leg_length: 0.22
 
 
 # Extrinsic parameter between IMU and Camera.
@@ -70,7 +70,7 @@ multiple_thread: 1
 
 #feature traker paprameters
 max_cnt: 150            # max feature number in feature tracking
-min_dist: 40            # min distance between two features 
+min_dist: 20           # min distance between two features 
 freq: 15                # frequence (Hz) of publish tracking result. At least 10Hz for good estimation. If set 0, the frequence will be same as raw image 
 F_threshold: 1.0        # ransac threshold (pixel)
 show_track: 1           # publish tracking image as topic
@@ -83,9 +83,9 @@ keyframe_parallax: 10.0 # keyframe selection threshold (pixel)
 
 #imu parameters       The more accurate parameters you provide, the better performance
 acc_n: 0.1          # accelerometer measurement noise standard deviation. #0.2   0.04
-gyr_n: 0.01         # gyroscope measurement noise standard deviation.     #0.05  0.004
-acc_w: 0.001         # accelerometer bias random work noise standard deviation.  #0.002
-gyr_w: 0.0001       # gyroscope bias random work noise standard deviation.     #4.0e-5
+gyr_n: 0.05         # gyroscope measurement noise standard deviation.     #0.05  0.004
+acc_w: 0.004         # accelerometer bias random work noise standard deviation.  #0.002
+gyr_w: 0.002       # gyroscope bias random work noise standard deviation.     #4.0e-5
 g_norm: 9.805         # gravity magnitude
 
 #unsynchronization parameters
