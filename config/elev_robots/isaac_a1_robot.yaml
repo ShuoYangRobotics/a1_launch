@@ -1,10 +1,10 @@
 point_cloud_topic: "/cloud_in"
 map_frame_id: "/world"
-robot_base_frame_id: "/base_link"
-sensor_frame_id: "/downward_camera"
-robot_pose_with_covariance_topic: "/isaac_a1/body_pose_with_cov"
+robot_base_frame_id: "/isaac_a1/gt_base_link"
+sensor_frame_id: "/isaac_a1/camera_left"
+robot_pose_with_covariance_topic: "/isaac_a1/gt_body_pose_with_cov"
 robot_pose_cache_size: 100
-track_point_frame_id: "/base_link"
+track_point_frame_id: "/isaac_a1/gt_base_link"
 track_point_x: 0.0
 track_point_y: 0.0
 track_point_z: 0.0
