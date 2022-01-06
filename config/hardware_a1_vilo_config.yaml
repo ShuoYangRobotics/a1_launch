@@ -5,7 +5,7 @@
 imu: 1         
 num_of_cam: 2  
 
-imu_topic: "/imu/data"
+imu_topic: "/hardware_a1/imu"
 image0_topic: "/camera_forward/infra1/image_rect_raw"
 image1_topic: "/camera_forward/infra2/image_rect_raw"
 output_path: "/home/shuoy/nv_work/unitree_ws/src/tightly-coupled-visual-inertial-leg-odometry/output"
@@ -36,11 +36,11 @@ v_n_term2_bound_force: 100.0
 v_n_term2_var_rescale: 1
 v_n_term3_vel_diff_xy: 0.5
 v_n_term3_vel_diff_z:  0.5
-v_n_term3_distance_rescale: 50.0
+v_n_term3_distance_rescale: 200.0
 v_n_final_ratio: 0.1
 
 # leg kinematics parameter
-lower_leg_length: 0.22
+lower_leg_length: 0.17
 
 
 # Extrinsic parameter between IMU and Camera.
@@ -51,18 +51,18 @@ body_T_cam0: !!opencv-matrix
    rows: 4
    cols: 4
    dt: d
-   data: [ 0,  0,  1, 0.04, 
-          -1,  0,  0, 0.02, 
-           0, -1,  0, 0.0, 
+   data: [ 0,  0,  1, 0.2693, 
+          -1,  0,  0, 0.025, 
+           0, -1,  0, 0.067, 
            0., 0., 0., 1. ]
 
 body_T_cam1: !!opencv-matrix
    rows: 4
    cols: 4
    dt: d
-   data: [ 0,  0,  1, 0.04, 
-          -1,  0,  0, -0.03, 
-           0, -1,  0, 0.0, 
+   data: [ 0,  0,  1, 0.2693, 
+          -1,  0,  0, -0.025, 
+           0, -1,  0, 0.067, 
            0., 0., 0., 1. ]
 
 #Multiple thread support
