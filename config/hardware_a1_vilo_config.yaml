@@ -22,8 +22,8 @@ leg_topic: "/hardware_a1/joint_foot"
 optimize_leg_bias: 1
 joint_angle_n: 0.00001
 joint_velocity_n: 0.00001
-leg_bias_xy_n: 0.001
-leg_bias_z_n:  0.001
+leg_bias_xy_n: 0.5
+leg_bias_z_n:  0.5
 # contact model
 v_n_force_thres_ratio: 0.8
 v_n_min: 0.0001
@@ -32,15 +32,12 @@ v_n_max: 500.0
 # v_n_w2: 0.333
 # v_n_w3: 0.333
 v_n_term1_steep: 10
-# v_n_term2_bound_force: 100.0
 v_n_term2_var_rescale: 1.0e-6
-# v_n_term3_vel_diff_xy: 0.5
-# v_n_term3_vel_diff_z:  0.5
-v_n_term3_distance_rescale: 0.0
+v_n_term3_distance_rescale: 1.0e-3
 v_n_final_ratio: 0.1
 
 # leg kinematics parameter
-lower_leg_length: 0.2
+lower_leg_length: 0.21
 
 
 # Extrinsic parameter between IMU and Camera.
