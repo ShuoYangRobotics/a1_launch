@@ -35,3 +35,23 @@ read the README.md file of the [VILO](https://github.com/paulyang1990/tightly-co
 The A1_Ctrl has a simple EKF for velocity and position estimation, in most cases it is good enough. 
 
 The VILO additionally provides global consistent position estimation and sparse mapping. 
+
+To see how VILO work, a lot of dependeancies must be installed on the computer. 
+
+* [a1_launch](https://github.com/paulyang1990/A1_launch)
+* [A1_visualizer](https://github.com/paulyang1990/A1_visualizer)
+* [tightly-coupled-visual-inertial-leg-odometry](https://github.com/paulyang1990/tightly-coupled-visual-inertial-leg-odometry)
+* [transform_graph](https://github.com/jstnhuang/transform_graph)
+* [unitree_ros](https://github.com/paulyang1990/unitree_ros)
+* [VINS-Fusion](https://github.com/HKUST-Aerial-Robotics/VINS-Fusion)
+
+You may notice the unitree ros is installed in docker eariler when you built the docker. Here we need it again because the A1_visualier use the unitree A1 urdf. If you don't want to go through the unitree_ros package installation process (it is very complicated). You can modify [A1_visualier to use a local urdf model](https://github.com/paulyang1990/A1_visualizer/blob/main/src/hardware_a1_visualize.cpp#L116) 
+
+
+After everything is properly installed, start the pipeline:
+1. (terminal 1) docker start a1_cpp_ctrl_docker
+2. (terminal 1) ssh root@localhost -p2233
+3. (terminal 2) roscore
+4. (terminal 3) roslaunch a1_launch front_camera_read.launch
+5. (terminal 4) roslaunch a1_launch hardware_a1_vilo_together.launch
+6. (terminal 1) roslaunch a1_cpp a1_qp_ctrl.launch type:=hardware
