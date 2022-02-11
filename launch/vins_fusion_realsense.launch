@@ -1,0 +1,13 @@
+
+
+<launch>
+
+    <!-- VINS config -->
+    <param name="vins_config_file" type="string" value="$(find a1_launch)/config/vins_fusion_real_sense.yaml" />
+    
+    <node name="vinsfusion" pkg="vins" type="vins_node"
+            args="$(find a1_launch)/config/vins_fusion_real_sense.yaml" output="screen"/>
+    <node name="vinsloopfusion" pkg="loop_fusion" type="loop_fusion_node"
+            args="$(find a1_launch)/config/vins_fusion_real_sense.yaml" />
+
+</launch>
